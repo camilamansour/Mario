@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-mario {
+    height: 150px;
+    margin-left: 50px;
+}
+
+.logo-mario-luigi {
+    height: 400px;
+}
+
+body {
+    height: 100vh;
+}
+
+button {
+    color: floralwhite;
+    background-color: hotpink;
+    border-radius: 3px;
+    border: none;
+    width: 150px;
+    height: 40px;
+    font-size: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+p {
+    color: rgb(245, 201, 216);
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.caixa-mae {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 100px;
+    justify-content: space-around;
+}
+
+.caixa-principal {
+    width: 45%;
+}
+
+.caixa-video {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(24, 28, 39, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(24, 28, 39, 0.99) 85%);
+    top: 0;
+    position: fixed;
+}
+
+.logo-whats {
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+}
+
+.header img {
+    height: 50px;
+}
+
+.header a {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: hotpink;
+    font-size: 25px;
+    transition: 0, 7s ease-in-out;
+}
+
+.formulario-fale-conosco {
+    background-color: white;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    position: fixed;
+    top: 30%;
+    left: -300px;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 3;
+    transition: left 1s ease-in-out;
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: hotpink;
+}
+
+textarea {
+    height: 100px;
+    width: 270px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: hotpink;
+}
+
+.mascara-formulario {
+    visibility: hidden;
+    transition: visibility 1s ease-in-out;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(24, 28, 39, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(24, 28, 39, 0.99) 85%);
+}
+
+@media(max-width: 900px) {
+    p {
+        display: none;
+    }
+    .caixa-mae {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .caixa-principal {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .logo-mario-luigi {
+        width: 70vw;
+        height: auto;
+    }
+    .header {
+        margin: 10px;
+    }
+    .header a{
+        font-size: 13px;
+    }
+}
+
+h1 {
+    height: 80px;
+    left: 40px;
+    color:white;
+    font-size: 30px;
+    padding: 30px;
+}
+.background {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.paragrafo-nossos-servico {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin-left:830px;
+    color: black;
+    font-size: 28px;
+}
+
+
+/*  
+Inicial
+Top: 30%
+Left: -300px
+
+Final
+Top: 30%
+Left: 50%
+transform: translateX(-50%)
+
+Media query
+max -> valor menor que Npx, aplica css do MEDIA
+min -> valor maior que Npx, aplica css do MEDIA
+*/
